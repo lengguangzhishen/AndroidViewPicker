@@ -1,7 +1,6 @@
 # AndroidViewPicker
 the application of IOC in Android
 
-for details in 
 
 the usage of fragment:
   1. init
