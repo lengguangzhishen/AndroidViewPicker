@@ -2,9 +2,9 @@
 the application of IOC in Android
 
 
-the usage of fragment:
-  1. init
-  
+the usage of Fragment:
+  1. init:bind Fragment with ViewPicker
+  
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -16,17 +16,17 @@ the usage of fragment:
         ViewPicker.injectFragment(this, view);
     }
     
-  2. ContentView
+  2. ContentView: bind the layoutId with Fragment
   
     @ContentView(R.layout.activity_main)
     public class MyFragment extends BaseFragment {}
     
-  3. ViewInject
+  3. ViewInject: bind the viewId with Fragment
   
     @ViewInject(R.id.tv)
     TextView tv;
     
-  4. Event
+  4. Event: bind click event etc
   
     @OnClick({R.id.tv, R.id.btn})
     public void click(View view) {
@@ -46,8 +46,8 @@ the usage of activity:
   
     @Override
     public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-        ViewPicker.bindActivity(this);
         super.onCreate(savedInstanceState, persistentState);
+        ViewPicker.bindActivity(this);
     }
     
   2. ContentView
