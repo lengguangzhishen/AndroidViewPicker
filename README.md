@@ -3,8 +3,10 @@ the application of IOC in Android
 
 
 the usage of Fragment:
+
   1. init:bind Fragment with ViewPicker
   
+  
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
